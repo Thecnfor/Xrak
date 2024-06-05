@@ -1,0 +1,14 @@
+<root>
+    <person>
+        <name>John</name>
+        <age>30</age>
+    </person>
+    <person>
+        <name>Jane</name>
+        <age>25</age>
+        <mybody>
+            <height>170</height>
+            <weight>70</weight>
+        </mybody>
+    </person>
+</root>
