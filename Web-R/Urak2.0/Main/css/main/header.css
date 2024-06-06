@@ -1,0 +1,117 @@
+.header{
+    background-color: #000000;/*设置背景为黑色*/
+    position: relative;display: flex;
+    width: 100%;height: 7vh;min-height: 2.5em;
+    z-index: 1;
+    justify-content: flex-end;align-items: stretch;
+}
+.logo{
+    position: absolute;display: flex;
+    justify-content: center;align-items: center;
+    left: 8%;
+    width: 5em;height: 7vh;min-height: 2.5em;
+    background-color:#ab0a0a;
+    backdrop-filter: blur(3px);-webkit-backdrop-filter: blur(3px);/*毛玻璃*/
+    text-align: center;
+    z-index: 2;
+}
+.more{
+    display: flex;justify-self: center;align-items: center;
+    padding-right: 1.5em;
+}
+.more div.menu{
+  display: flex;
+}
+.more div.menu ul{
+  display: flex;justify-content: center;align-items: center;
+  
+}
+.menu li{
+  display: flex;justify-content: center;align-items: center;
+  width: 10vw;
+  margin-top:-100px;
+  transition-duration: 5ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+ul > :nth-child(1){background-color: #ab0a0a;}
+ul > :nth-child(2){background-color: #6e5151;}
+ul > :nth-child(3){background-color: rgb(82, 140, 190);}
+ul > :nth-child(4){background-color: aqua;}
+ul > :nth-child(5){background-color: brown;}
+ul > :nth-child(6){background-color: rgb(121, 62, 62);}
+ul > :nth-child(1){margin-top: 0;}
+.more div.mid{
+  display: flex;justify-content: center;align-items: center;
+  width: 10vw;
+  font-size: larger;color: #ffffff;
+}
+/* FIN ICON-MENU */
+.check-icon{
+  border: none;cursor: pointer;
+  background-color: transparent;
+  --gap: 5px;/*设置间距*/
+  --height-bar: 2.5px;/*设置条的高度*/
+  --pos-y-bar-one: 0;/*设置第一个条的位置*/
+  --pos-y-bar-three: 0;/*设置第三个条的位置*/
+  --scale-bar: 1;/*设置条的缩放比例*/
+  --rotate-bar-one: 0;/*设置第一个条的旋转角度*/
+  --rotate-bar-three: 0;/*设置第三个条的旋转角度*/
+  width: 25px;display: flex;position:relative;flex-direction: column;gap: var(--gap);
+}
+.icon-menu {
+  width: 25px;/*设置图标的宽度*/
+  display: flex;/*设置为flex布局*/
+  flex-direction: column;/*设置主轴为垂直方向*/
+  gap: var(--gap);/*设置间距*/
+  cursor: pointer;/*设置鼠标样式为手型*/
+  position: relative;/*设置为相对定位*/
+}
+.bar {
+  position: relative;/*设置为相对定位*/
+  height: 3px;/*设置条的高度*/
+  width: 100%;/*设置条的宽度为100%*/
+  border-radius: .5rem;/*设置条的圆角*/
+  background-color: #ffffff;/*设置条的背景颜色*/
+}
+
+.bar--1 {
+  top: var(--pos-y-bar-one);/*设置第一个条的位置*/
+  transform: rotate(var(--rotate-bar-one));/*设置第一个条的旋转角度*/
+  transition: top 200ms 100ms, transform 100ms;/*设置过渡效果*/
+}
+
+.bar--2 {
+  transform: scaleX(var(--scale-bar));/*设置第二个条的缩放比例*/
+  transition: transform 150ms 100ms;/*设置过渡效果*/
+}
+
+.bar--3 {
+  bottom: var(--pos-y-bar-three);/*设置第三个条的位置*/
+  transform: rotate(var(--rotate-bar-three));/*设置第三个条的旋转角度*/
+  transition: bottom 200ms 100ms, transform 100ms;/*设置过渡效果*/
+}
+
+.check-icon:active > .bar--1{
+  transition: top 200ms, transform 200ms 100ms;/*设置过渡效果*/
+}
+
+.check-icon:active > .bar--3 {
+  transition: bottom 200ms, transform 200ms 100ms;/*设置过渡效果*/
+}
+
+.check-icon:active {
+  --pos-y-bar-one: calc(var(--gap) + var(--height-bar));/*设置第一个条的位置*/
+  --pos-y-bar-three: calc(var(--gap) + var(--height-bar));/*设置第三个条的位置*/
+  --scale-bar: 0;/*设置第二个条的缩放比例*/
+  --rotate-bar-one: 45deg;/*设置第一个条的旋转角度*/
+  --rotate-bar-three: -45deg;/*设置第三个条的旋转角度*/
+}
+.check-icon:focus {
+  --pos-y-bar-one: calc(var(--gap) + var(--height-bar));/*设置第一个条的位置*/
+  --pos-y-bar-three: calc(var(--gap) + var(--height-bar));/*设置第三个条的位置*/
+  --scale-bar: 0;/*设置第二个条的缩放比例*/
+  --rotate-bar-one: 45deg;/*设置第一个条的旋转角度*/
+  --rotate-bar-three: -45deg;/*设置第三个条的旋转角度*/
+}
+/* FIN ICON-MENU */

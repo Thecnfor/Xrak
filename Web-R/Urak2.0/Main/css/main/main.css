@@ -1,0 +1,11 @@
+.main{
+    position: relative;
+    background-color: burlywood;
+    height: 93vh;min-height: 25em;
+    z-index: 0;
+}
+.text{
+    position: absolute;
+    background-color: black;
+    bottom: 3em;left: 8em;max-width: 60%;max-height: 40%;overflow: auto;
+}

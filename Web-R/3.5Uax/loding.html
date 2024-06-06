@@ -1,0 +1,43 @@
+<head>
+    <title>X</title>
+    <link rel="shortcut icon" type="image/x-icon" href="back/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;padding: 0;
+            text-decoration: none;list-style: none;
+        }
+        .main{
+            position: absolute;top: 0;bottom: 0;
+            width: 100%;
+            display: flex;align-items: center;justify-content: center;
+        }
+        h1{
+            text-align: center;font-size: 60px;
+        }
+        p{text-align: center; font-size: 18px;color: rgb(95, 95, 95);padding-top: 0.2em;padding-bottom: 5em;padding-left: 0.7em;
+            cursor: pointer;
+        }
+        .start{
+            display: flex;align-items: center;justify-content: center;
+        }
+    </style>
+    <script>
+        function startUra(){
+            if (document.getElementById(start).checked == true)
+            document.write("12344")
+        }
+    </script>
+</head>
+<div class="main">
+    <div>
+        <h1>URAK</h1>
+        <div class="start">
+            <input type="checkbox" hidden id="start" onclick="startUra">
+            <label for="start">
+                <a href="home.html"><p>让我们开始！</p></a>
+            </label>
+        </div>
+    </div>
+</div>

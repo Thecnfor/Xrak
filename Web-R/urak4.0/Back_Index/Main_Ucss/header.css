@@ -1,0 +1,85 @@
+.header-wrap{
+    display: flex;width: 100%;justify-content: center;
+}
+header{
+    position: fixed;
+    z-index: 1000;width:100%;max-width: 1080px;
+}
+.header-container{
+    position: relative;
+    display: flex;height: var(--top-header-height);
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;margin-left: 1em;
+}
+.logo{font-size: larger;font-weight: bold;width:50px;color: white;}
+.login{width: 50px;color:white;font-weight: bold;position: relative;}
+ul{
+    display: flex;align-content: center;justify-content: center;
+}
+li{padding-right: 1em;padding-left: 1em;}
+a{color: white;font-size: 15px;}
+.menu-btn{display: none;}
+@media (max-width: 768px) {
+    .nav{display: none;}
+    .menu-btn{display: flex;align-items: center;justify-content: center;color: white;cursor: pointer;margin-left: 0.3em;}
+    .search{display: flex;}
+    .login{margin-right: 0.5em;}
+}
+.icon-menu {
+    --gap: 4px;
+    --height-bar: 2px;
+    --pos-y-bar-one: 0;
+    --pos-y-bar-three: 0;
+    --scale-bar: 1;
+    --rotate-bar-one: 0;
+    --rotate-bar-three: 0;
+    width: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .bar {
+    position: relative;
+    height: var(--height-bar);
+    width: 100%;
+    border-radius: .5rem;
+    background-color: #ffffff;
+  }
+  
+  .bar--1 {
+    top: var(--pos-y-bar-one);
+    transform: rotate(var(--rotate-bar-one));
+    transition: top 200ms 100ms, transform 100ms;
+  }
+  
+  .bar--2 {
+    transform: scaleX(var(--scale-bar));
+    transition: transform 150ms 100ms;
+  }
+  
+  .bar--3 {
+    bottom: var(--pos-y-bar-three);
+    transform: rotate(var(--rotate-bar-three));
+    transition: bottom 200ms 100ms, transform 100ms;
+  }
+  
+  .check-icon:checked + .icon-menu > .bar--1 {
+    transition: top 200ms, transform 200ms 100ms;
+  }
+  
+  .check-icon:checked + .icon-menu > .bar--3 {
+    transition: bottom 200ms, transform 200ms 100ms;
+  }
+  
+  .check-icon:checked + .icon-menu {
+    --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+    --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+    --scale-bar: 0;
+    --rotate-bar-one: 45deg;
+    --rotate-bar-three: -45deg;
+  }
+  /* FIN ICON-MENU */  

@@ -1,0 +1,8 @@
+.continer_main{
+    background-color: aqua;width: 100%;
+    display: flex;justify-content: center;align-items: center;
+}
+.desk_main{
+    margin-top: 20px;
+    background-color: azure;
+}

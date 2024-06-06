@@ -1,0 +1,16 @@
+.标题栏{
+    display: flex;align-items: center;justify-content: space-between;
+    height: var(--main-height);
+}
+.Rak{
+    display: flex;justify-content: center;align-self: center;
+    background-color: var(--main-color);
+    padding-left:calc(var(--main-height) / 2) ;
+}
+.中间留白处{
+    width: calc(var(--main-height) / 2);
+}
+.更多{
+    display: flex;justify-content: center;align-items: center;
+    padding-right: calc(var(--main-height) / 4);
+}

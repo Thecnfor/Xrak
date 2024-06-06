@@ -1,0 +1,65 @@
+.continer_header{
+    width: 100%;height: var(--top_header_height);display: flex;
+    z-index: 30;
+    transition: all 0.3s cubic-bezier(0, 0.41, 0, 0.83);
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+.logo{
+    margin-left: 20px;margin-right: 15px;padding-top: 0.5em;
+    font-size: 25px;color: black;
+    transition: all 0.6s ease-out;
+}
+.continer_list{
+    opacity: 1;transition: all 0.2s cubic-bezier(0, 0.41, 0, 0.83);
+}
+ul{
+    display: flex;align-items: center;justify-content: center;
+}
+li{margin-left: 45px;padding-top: 1.1em;}
+#list-3{transition: all 0.3s ease-out;}
+#list-2{transition: all 0.4s ease-out;}
+#list-1{transition: all 0.5s ease-out;}
+a{color: rgb(59, 59, 59);position: relative;}
+#list-1:hover {  
+    color: rgb(0, 0, 0);  
+}#list-2:hover {  
+    color: rgb(0, 0, 0);  
+}#list-3:hover {  
+    color: rgb(0, 0, 0);  
+}
+.continer_more{
+    position: absolute;right: 20px;
+    width: 25px;height: 2rem;padding-top: 1.2em;
+}
+label{cursor: pointer}
+.bar{
+    width: 100%;height: 3px;background-color: black;cursor:pointer;
+    border-radius: 3em;margin-top: 3px;
+    transition: all 0.4s cubic-bezier(0, 0.41, 0, 0.83);
+}
+.nav{
+    width: 15rem;height:calc(100% - var(--top_header_height));background-color: black;
+    position: fixed;right: -15rem;top: var(--top_header_height);
+    transition:all 0.3s cubic-bezier(0, 0.41, 0, 0.83);
+    z-index: 10;
+}
+.nav_mo{
+    width: 1000vw;height: calc(100% - var(--top_header_height));background-color: black;
+    opacity: 0;position: fixed;right: 0;top: var(--top_header_height);
+    transition: all 0.3s cubic-bezier(0, 0.41, 0, 0.83);
+    background: rgba(0, 0, 0);
+}
+@media (max-width:767px) {
+    .continer_list{
+        opacity: 0;
+    }
+    .nav_mo{display: none;}
+    .nav{display: none;}
+    .continer_header{
+        height: 99dvh;
+        align-items: baseline;
+        transition: all 0.5s cubic-bezier(0, 0.41, 0, 0.83);
+    }
+}

@@ -1,0 +1,24 @@
+@import url('main/header.css');
+@import url('main/footer.css');
+@import url('main/main.css');
+@import url('main/sidebar.css');
+:root{
+    --main-width:100dvw;--main-height:100dvh;
+    --normal-height:4rem;
+    --margin:2rem;
+    --text-decoration:1px;--delay-time:0.15s;
+    --li-padding:calc(var(--normal-height)/4 - 20px);
+    --main-opatic:0;
+    --main-color:white;
+}
+*{
+    color: var(--main-color);
+    padding: 0;margin: 0;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;list-style: none;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    width: var(--main-width);height: var(--main-height);
+}
+a{color: #000;}

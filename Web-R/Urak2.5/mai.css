@@ -1,0 +1,32 @@
+:root{
+    --root-color:rgb(50, 25, 109);/* 定义基础颜色 */
+    --r:244;--g:96;--b:108;
+    --color: rgb(var(--r),var(--g),var(--b));
+    --darken-light:0.5;/* 定义基础颜色深浅 */
+}
+*{
+    transition: all 0.5s ease-in-out;
+    margin: 0;padding: 0;
+    text-decoration: none;  list-style-type: none;
+}
+body{
+    background-color: var(--color);
+    display: flex;
+    align-items: center;justify-content: center;
+}
+.main{
+    width: 80vw;height: 80vh;  
+    border-radius: 44px;
+    background: var(--color);
+    box-shadow:  
+    -22px 22px 44px rgb(  
+      calc(var(--r) * (1 - var(--darken-light))),  
+      calc(var(--g) * (1 - var(--darken-light))),  
+      calc(var(--b) * (1 - var(--darken-light)))  
+    ),  
+    22px -22px 44px rgb(  
+      calc(var(--r) * (1 + var(--darken-light))),  
+      calc(var(--g) * (1 + var(--darken-light))),  
+      calc(var(--b) * (1 + var(--darken-light)))  
+    );
+}

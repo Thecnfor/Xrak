@@ -1,0 +1,10 @@
+*{
+    padding: 0;margin: 0;
+    text-decoration: none;list-style: none;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+:root{
+    --top_header_height:4rem
+}

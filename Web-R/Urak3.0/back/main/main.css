@@ -1,0 +1,10 @@
+.main{
+    width: var(--main-width);height: calc(var(--main-height) - var(--normal-height));
+}
+.fiction{
+    height: 94%;
+}
+.main-content{
+    display: flex;align-items: flex-start;justify-content: center;
+    height: 6%;
+}
