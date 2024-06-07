@@ -38,7 +38,7 @@ main{
     border-radius: 10px;
     display: flex;align-items: center;justify-content: center;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    cursor: pointer;position: relative;
 }
 .main-body:hover{
     background: rgba(110, 108, 108, 0.5);
@@ -58,6 +58,17 @@ main{
     top: 0;  
     transform: none;
 }
+.main-body.full-screen .more-wrap{display: block;}
+.more-wrap{display: none;}
+.more-body{
+    position: absolute;z-index: 10;width: 100%;height: 100%;top: 0;left: 0;
+    display: flex;align-items: center;justify-content: center;
+}
+iframe{
+    width: 100%;height: 100%;
+    border-radius: 2px;
+}
+
 @media (max-width: 768px) {
     .main-body{
         width: 100%;height: 6em;margin-top: 0.5em;margin-bottom: 0.5em;

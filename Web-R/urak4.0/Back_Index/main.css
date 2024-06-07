@@ -13,3 +13,6 @@ body{
 :root{
     --top-header-height:3em
 }
+iframe{
+    border: none;
+}
