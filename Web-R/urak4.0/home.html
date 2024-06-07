@@ -5,7 +5,6 @@
         <link rel="preload" href="Back_Index/main.css" as="style">
         <link rel="preload" href="back/main.js" as="script">
         <link rel="preload" href="back/main.wasm" as="module">
-        <!--基本资料-->
         <title>X</title>
         <link rel="shortcut icon" type="image/x-icon" href="back/favicon.ico">
         <!--配置文件-->
@@ -40,7 +39,12 @@
                             </ul>
                         </div>
                         <div class="search">
-                            <div class="login">LOGIN</div>
+                            <div class="login">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                    <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                </svg>
+                            </div>
                             <div class="menu-btn">
                                 <div class="menu-btn-wrap">
                                     <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox">
@@ -59,19 +63,50 @@
        <main>
         <div class="main-container">
             <div class="main">
-                <span style="color: aqua;">Home</span>
+                <div class="main-title">
+                    <h1>最近的项目:</h1>
+                </div>
+                <div class="main-fabody">
+                    <div class="main-body item-1" id="continer1">Arduino</div>
+                    <div class="main-body item-2" id="continer2">Java</div>
+                    <div class="main-body item-3" id="continer3">Ubuntu</div>
+                    <div class="main-body item-4" id="continer4">C/C++</div>
+                </div>
             </div>
         </div>
+        <script>
+            // 获取所有的 main-body 元素  
+            var mainBodyElements = document.querySelectorAll('.main-body');  
+            
+            // 为每个 main-body 元素添加点击事件监听器  
+            mainBodyElements.forEach(function(element) {  
+                element.addEventListener('click', function() {  
+                    // 移除其他元素的 full-screen 类  
+                    mainBodyElements.forEach(function(otherElement) {  
+                        otherElement.classList.remove('full-screen');  
+                    });  
+                    // 为当前点击的元素添加 full-screen 类  
+                    this.classList.add('full-screen');  
+                });  
+            });
+        </script>
         <div class="content-container">
             <div class="content">
                 <div class="content-title">
-                    <h1>X</h1>
+                    <h1>未来的项目</h1>
                 </div>
                 <div class="content-body">
-                    Xura是一款基于Web的开源的AI聊天机器人，它可以帮助您快速、轻松地与您的客户进行沟通。Xura的聊天机器人系统由深度学习技术驱动，可以自动识别并回答您的问题。Xura的聊天机器人系统可以帮助您解决日常生活中的各种问题，提升工作效率，提升客户满意度。
+                    <div class="content-item">
+                        测试区
+                    </div>
                 </div>
             </div>
         </div>
+        <more>
+            <div class="more-container" style="width: 100%; height: 80vh; background-color: #000000;">
+                
+            </div>
+       </more>
        </main>
     </body>
 </html>

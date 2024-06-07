@@ -1,36 +1,41 @@
-#include <ESP8266WiFi.h>  
-  
-// 替换为你的WiFi网络SSID和密码  
-const char* ssid = "RedG";  
-const char* password = "12345678";  
 
-WiFiServer server(8266);//你要的端口号，随意修改，范围0-65535
-
-void setup() {  
-  Serial.begin(115200); // 启动串口通信，设置波特率为115200  
-  delay(10);  
+ #include <ESP8266WiFi.h>  
+#include <ESP8266WebServer.h>  
   
-  // 连接到WiFi网络  
+const char* ssid = "HUAWEI-W"; // 替换为您的WiFi SSID  
+const char* password = "W@18025693031"; // 替换为您的WiFi密码  
+  
+ESP8266WebServer server(8080);  
+  
+void handleRoot() {  
+  String message;  
+  if (server.hasArg("data")) {  
+    message = "Received data: " + server.arg("data");  
+  } else {  
+    message = "No data received";  
+  }  
+  server.send(200, "text/plain", message);  
+  Serial.println(message);
+}  
+  
+void setup(void) {  
+  Serial.begin(115200);  
   WiFi.begin(ssid, password);  
-  Serial.println("");  
-  
-  // 等待WiFi连接  
   while (WiFi.status() != WL_CONNECTED) {  
     delay(500);  
     Serial.print(".");  
   }  
-
-  server.begin();
-    server.setNoDelay(true);  //加上后才正常些
-
-  
-  // 连接成功后打印网络信息  
   Serial.println("");  
-  Serial.println("WiFi connected");  
-  Serial.println("IP address: ");  
-  Serial.println(WiFi.localIP()); // 打印Arduino设备的IP地址  
+  Serial.print("Connected to ");  
+  Serial.println(ssid);  
+  Serial.print("IP Address: ");  
+  Serial.println(WiFi.localIP());  
+  
+  server.on("/", handleRoot);  
+  server.begin();  
+  Serial.println("HTTP server started");  
 }  
   
-void loop() {  
-  // 这里可以写你的主程序代码，例如通过WiFi发送或接收数据等。  
+void loop(void) {  
+  server.handleClient();  
 }
