@@ -12,6 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="renderer" content="webkit">
+        <!--缓存控制-->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />  
+        <meta http-equiv="Pragma" content="no-cache" />  
+        <meta http-equiv="Expires" content="0" />
         <!--样式文件区域-All-->
         <link rel="stylesheet" type="text/css" href="Back_Index/main.css">
         <link rel="stylesheet" type="text/css" href="Back_Index/Main_Ucss/body.css">
@@ -22,7 +26,17 @@
         <!--样式文件区域-Media-->
         <link rel="stylesheet" type="text/css" href="Back_Index/Main-Rcss/" media="">
         <!--脚本文件区域-->
-        <script type="text/javascript" src="Back_UJs/main.js"></script>
+        <script type="text/javascript" src="Back_UJs/main.js">
+            window.onload = function() {  
+                var url = window.location.href;  
+                if (url.indexOf('?') > -1) {  
+                    url += '&timestamp=' + Date.now();  
+                } else {  
+                    url += '?timestamp=' + Date.now();  
+                }  
+                window.location.href = url;  
+            };
+        </script>
     </head>
     <body>
         <div class="header-wrap">
