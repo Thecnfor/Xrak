@@ -15,12 +15,13 @@
     <div class="container_status">
         <h2>Arduino 状态</h2>
         <div class="container_status_item">
-            <h3>板子状态</h3>
+            <h3></h3>
             <p id="status"></p>
         </div>
         <div class="container_control_response">
             <h3>输出反应</h3>
             <div id="response"></div>
+            <div id="response_joystick"></div>
         </div>
     </div>
     <div class="container_control_container">
@@ -45,7 +46,37 @@
                     xhr.send();  
                 }  
             </script>
+            <script>  
+                // 假设你有一个名为 'sendJoystickData' 的函数，它发送 AJAX 请求到 PHP 脚本  
+                function sendJoystickData(x, y) {  
+                    // 使用 Fetch API, jQuery.ajax, 或 XMLHttpRequest 发送请求  
+                    // 这里使用 Fetch API 作为例子  
+                    fetch('home.php', {  
+                        method: 'POST',  
+                        headers: {  
+                            'Content-Type': 'application/json'  
+                        },  
+                        body: JSON.stringify({ x: x, y: y })  
+                    })  
+                    .then(response => response.json())  
+                    .then(data => {  
+                        var responseDiv = document.getElementById('response_joystick');  
+                        if (data.status === 'success') {  
+                            responseDiv.innerHTML = '成功发送命令X: ' + data.message.split(': ')[1].split(', ')[0] + '，Y: ' + data.message.split(', ')[1].split(' ')[0] + '，ESP8266响应: ' + data.message.split(', ')[2];  
+                        } else {  
+                            responseDiv.innerHTML = data.message;  
+                        }  
+                    })  
+                    .catch(error => {  
+                        console.error('Error:', error);  
+                        // 显示错误到 div 或其他元素中  
+                        responseDiv.innerHTML = error.message;  
+                    });  
+                }  
+                  
+                // 你可以通过调用 sendJoystickData 函数并传递 x 和 y 值来触发 AJAX 请求  
+                // 例如：sendJoystickData(10, 20);  
+            </script>
         </div>
     </div>
-</body>
 </html>

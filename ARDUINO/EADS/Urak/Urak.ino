@@ -43,7 +43,6 @@ void handleCommand() {
       Serial.print("\n");
     }   
     server.send(200, "text/plain", "Command received: " + action);  //读取成功
-  } else {  
-    server.send(400, "text/plain", "Invalid request");  //读取非action返回
-  }  
+  }
+  
 }  

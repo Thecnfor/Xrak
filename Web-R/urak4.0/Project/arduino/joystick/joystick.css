@@ -12,3 +12,16 @@
   user-select	: none;
   background-color:rgb(255, 255, 255);
 }
+*{
+  touch-action: none;
+}
+*:focus {  
+  outline: none;  
+  box-shadow: none; /* 一些浏览器可能使用box-shadow来显示焦点 */  
+}  
+button:focus,  
+input[type="button"]:focus,  
+input[type="submit"]:focus {  
+  outline: none;  
+  box-shadow: none;  
+}

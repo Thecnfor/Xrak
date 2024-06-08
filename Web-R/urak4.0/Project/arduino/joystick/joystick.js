@@ -47,31 +47,57 @@ ele.addEventListener("touchstart", down);
 ele.addEventListener("touchmove", move);
 ele.addEventListener("touchend", up);
 
-setInterval(function () {
-  let outputEl = document.getElementById("result");
-  outputEl.innerHTML =
-    "<b>相对位置:</b> " + " X:" + displayX + " Y:" + displayY;
-
-        // 使用Fetch API发送数据到PHP  
-        fetch('../home.php', {  
-          method: 'POST', // 或者 'GET'，取决于你的需求  
-          headers: {  
-              'Content-Type': 'application/json',  
-          },  
-          body: JSON.stringify({ x: displayX, y: displayY }), // 将数据转换为JSON格式  
-      })  
-      .then(response => response.json()) // 解析PHP返回JSON格式的数据  
-      .then(data => {  
-          // 处理返回的数据（如果需要）  
-          console.log(data);  
-          outputEl.innerHTML += "<br><b>服务器返回:</b> " + data.message;  
-      })  
-      .catch((error) => {  
-          console.error('Error:', error);  
-          outputEl.innerHTML += "<br><b>服务器返回:</b> " + error.message;  
-      });  
-
-}, 33);
+let lastSentX = null;  
+let lastSentY = null;  
+let hasReceivedData = false; // 新增的标志变量，用于跟踪是否已接收过数据  
+let lastServerResponse = null;  
+  
+setInterval(function () {  
+  if (displayX !== lastSentX || displayY !== lastSentY) { // 如果坐标发生变化，则发送数据到服务器  
+    let outputEl = document.getElementById("result");  
+  
+    // 更新相对位置显示  
+    outputEl.innerHTML = "<b>相对位置:</b> X:" + displayX + " Y:" + displayY;  
+  
+    // 使用Fetch API发送数据到PHP  
+    fetch('../home.php', {  
+      method: 'POST',  
+      headers: {  
+        'Content-Type': 'application/json',  
+      },  
+      body: JSON.stringify({ x: displayX, y: displayY }), // 将数据转换为JSON格式  
+    })  
+    .then(response => {  
+      if (!response.ok) {  
+        throw new Error('网络响应状态码不是2xx');  
+      }  
+      return response.json(); // 解析PHP返回JSON格式的数据  
+    })  
+    .then(data => {  
+      // 无论数据是否改变，如果尚未接收过数据，则显示它  
+      if (!hasReceivedData) {  
+        hasReceivedData = true; // 标记为已接收过数据  
+        outputEl.innerHTML += "<br><b>服务器返回:</b> " + data.message;  
+      }  
+  
+      // 检查数据是否已改变（仅当已接收过数据时）  
+      if (hasReceivedData && JSON.stringify(data) !== JSON.stringify(lastServerResponse)) {  
+        // 数据已改变，更新显示  
+        lastServerResponse = data; // 更新上次返回的数据  
+        outputEl.innerHTML += "<br><b>服务器返回:</b> " + data.message;  
+      }  
+    })  
+    .catch((error) => {  
+      // 错误时总是更新显示  
+      outputEl.innerHTML += "<br><b>服务器返回错误:</b> " + (error.message || error);  
+      lastServerResponse = null; // 重置上次返回的数据  
+    });  
+  
+    // 更新最后发送的值  
+    lastSentX = displayX;  
+    lastSentY = displayY;  
+  }  
+}, 30); // 假设这里的间隔是合适的
 
 let stickEle = createStickCanvas();
 let baseEle = createBaseCanvas();

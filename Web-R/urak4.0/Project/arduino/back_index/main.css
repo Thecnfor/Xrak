@@ -1,6 +1,16 @@
 *{
     color: white;
 }
+*:focus {  
+    outline: none;  
+    box-shadow: none; /* 一些浏览器可能使用box-shadow来显示焦点 */  
+}  
+button:focus,  
+input[type="button"]:focus,  
+input[type="submit"]:focus {  
+    outline: none;  
+    box-shadow: none;  
+}
 body{
     background-color: black;
 }
@@ -26,5 +36,5 @@ body{
     transition: 0.5s;
 }
 .container_control_joystick{
-    height: 50vh;
+    height: 1000px;
 }

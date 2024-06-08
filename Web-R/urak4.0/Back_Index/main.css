@@ -16,3 +16,17 @@ body{
 iframe{
     border: none;
 }
+*:focus {  
+    outline: none;  
+    box-shadow: none; /* 一些浏览器可能使用box-shadow来显示焦点 */  
+}  
+button:focus,  
+input[type="button"]:focus,  
+input[type="submit"]:focus {  
+    outline: none;  
+    box-shadow: none;  
+}
+*:not(input):not(textarea):not([contenteditable=true]) {  /* 禁止用户选中文本 */  
+    user-select: none;  
+    -webkit-tap-highlight-color: transparent;  
+}  
