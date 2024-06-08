@@ -1,0 +1,17 @@
+<button onclick="sendCommand('turnOn')">Turn On</button>  
+<button onclick="sendCommand('turnOff')">Turn Off</button>  
+<div id="response"></div>  
+
+<script>  
+    function sendCommand(action) {  
+        var url = "home.php?action=" + action;  
+        var xhr = new XMLHttpRequest();  
+        xhr.open("GET", url, true);  
+        xhr.onreadystatechange = function () {  
+            if (xhr.readyState == 4 && xhr.status == 200) {  
+                document.getElementById("response").innerHTML = "Response: " + xhr.responseText;  
+            }  
+        };  
+        xhr.send();  
+    }  
+</script>
