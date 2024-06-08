@@ -37,12 +37,17 @@ void handleCommand() {
     String action = server.arg("action");  //获取action值
     if (action.equals("turnOn")) {  //action.equals("turnOn")就是action==“turnOn”
       Serial.print("TURN_ON");
-      Serial.print("\n");
+      Serial.println("_control");
     } else if (action.equals("turnOff")) {  
       Serial.print("turnOff");
-      Serial.print("\n");
+      Serial.println("_control");
     }   
-    server.send(200, "text/plain", "Command received: " + action);  //读取成功
+    server.send(200, "text/plain", "读取成功 " + action);  //读取成功
   }
-  
+  if (server.hasArg("x")) {
+    String x = server.arg("x");
+    String y = server.arg("y");
+    Serial.println(x+","+y+"/ln");
+    server.send(200, "text/plain", "读取成功");  //读取成功
+  }
 }  

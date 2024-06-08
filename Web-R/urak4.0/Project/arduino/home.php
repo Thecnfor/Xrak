@@ -32,7 +32,7 @@ if (isset($_GET['action'])) {
             $y = $data['y'];  
       
             // 在这里处理你的X和Y值...  
-            $url = "http://{$esp8266_ip}:{$port}/command?action={$x}&y={$y}";  
+            $url = "http://{$esp8266_ip}:{$port}/command?x={$x}&y={$y}";  
       
             // 初始化curl...  
             $ch = curl_init($url);  

@@ -36,12 +36,18 @@ void handleCommand() {
   if (server.hasArg("action")) {  //检查请求中是否包含 action 参数
     String action = server.arg("action");  //获取action值
     if (action.equals("turnOn")) {  //action.equals("turnOn")就是action==“turnOn”
-      Serial.write(action);
+      Serial.print("TURN_ON");
+      Serial.println("_control");
     } else if (action.equals("turnOff")) {  
-      Serial.write(action);
+      Serial.print("turnOff");
+      Serial.println("_control");
     }   
-    server.send(200, "text/plain", "Command received: " + action);  //读取成功
-  } else {  
-    server.send(400, "text/plain", "Invalid request");  //读取非action返回
-  }  
+    server.send(200, "text/plain", "读取成功 " + action);  //读取成功
+  }
+  if (server.hasArg("x")) {
+    String x = server.arg("x");
+    String y = server.arg("y");
+    Serial.print(x+","+y+"/ln");
+    server.send(200, "text/plain", "读取成功");  //读取成功
+  }
 }  
