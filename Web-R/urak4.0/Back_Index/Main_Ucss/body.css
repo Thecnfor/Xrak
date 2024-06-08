@@ -50,7 +50,7 @@ main{
     transform: scale(1.02);
 }
 .main-body.full-screen{
-    background: rgba(250, 243, 243, 0.75);
+    background: rgba(255, 255, 255);
     transition: all .4s cubic-bezier(.075,.82,.165,1) 0ms;
     width: 100%; /* 全屏宽度 */  height: 80vh;
     left: 0;  
