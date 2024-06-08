@@ -36,9 +36,9 @@ void handleCommand() {
   if (server.hasArg("action")) {  //检查请求中是否包含 action 参数
     String action = server.arg("action");  //获取action值
     if (action.equals("turnOn")) {  //action.equals("turnOn")就是action==“turnOn”
-      Serial.write(action);
+      Serial.print("TURN_ON\n");
     } else if (action.equals("turnOff")) {  
-      Serial.write(action);
+      Serial.print("turnOff\n");
     }   
     server.send(200, "text/plain", "Command received: " + action);  //读取成功
   } else {  
