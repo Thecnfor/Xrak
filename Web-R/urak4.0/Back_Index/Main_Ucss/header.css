@@ -29,6 +29,29 @@ ul{
 }
 li{padding-right: 1em;padding-left: 1em;}
 a{color: white;font-size: 15px;}
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 2px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 .menu-btn{display: none;}
 @media (max-width: 768px) {
   .nav{display: none;}

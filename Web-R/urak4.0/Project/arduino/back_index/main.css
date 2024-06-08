@@ -1,0 +1,30 @@
+*{
+    color: white;
+}
+body{
+    background-color: black;
+}
+.container_control_container{
+    display: flex;
+    justify-content: center;
+}
+.container_control{
+    position: relative;width: 100%;
+}
+.container_control_buttons{
+    background-color: rgb(0, 0, 0,0);
+}
+.button_control {
+    background: none;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button_control:hover {
+    background: rgba(170, 170, 170, 0.062);
+    transition: 0.5s;
+}
+.container_control_joystick{
+    height: 50vh;
+}

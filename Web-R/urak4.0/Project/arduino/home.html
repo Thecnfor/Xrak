@@ -1,17 +1,51 @@
-<button onclick="sendCommand('turnOn')">Turn On</button>  
-<button onclick="sendCommand('turnOff')">Turn Off</button>  
-<div id="response"></div>  
-
-<script>  
-    function sendCommand(action) {  
-        var url = "home.php?action=" + action;  
-        var xhr = new XMLHttpRequest();  
-        xhr.open("GET", url, true);  
-        xhr.onreadystatechange = function () {  
-            if (xhr.readyState == 4 && xhr.status == 200) {  
-                document.getElementById("response").innerHTML = "Response: " + xhr.responseText;  
-            }  
-        };  
-        xhr.send();  
-    }  
-</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="back_index/main.css">
+</head>
+<body>
+    <div class="container_content">
+        <h1>Arduino 控制台</h1>
+        <p>欢迎使用 Arduino 控制台，你可以通过此控制台来控制你的 Arduino 板子。</p>
+    </div>
+    <div class="container_status">
+        <h2>Arduino 状态</h2>
+        <div class="container_status_item">
+            <h3>板子状态</h3>
+            <p id="status"></p>
+        </div>
+        <div class="container_control_response">
+            <h3>输出反应</h3>
+            <div id="response"></div>
+        </div>
+    </div>
+    <div class="container_control_container">
+        <div class="container_control">
+            <div class="container_control_buttons">
+                <button onclick="sendCommand('turnOn')" class="button_control">Turn On</button>  
+                <button onclick="sendCommand('turnOff')" class="button_control">Turn Off</button> 
+            </div>
+            <div class="container_control_joystick">
+                <iframe src="joystick/index.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <script>  
+                function sendCommand(action) {  
+                    var url = "home.php?action=" + action;  
+                    var xhr = new XMLHttpRequest();  
+                    xhr.open("GET", url, true);  
+                    xhr.onreadystatechange = function () {  
+                        if (xhr.readyState == 4 && xhr.status == 200) {  
+                            document.getElementById("response").innerHTML = "Response: " + xhr.responseText;  
+                        }  
+                    };  
+                    xhr.send();  
+                }  
+            </script>
+        </div>
+    </div>
+</body>
+</html>

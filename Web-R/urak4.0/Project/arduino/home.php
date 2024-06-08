@@ -27,4 +27,17 @@ if (isset($_GET['action'])) {
     // 如果没有传递action参数，可以输出一个错误消息或默认响应  
     echo "No action specified.";  
 }  
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {  
+    $data = json_decode(file_get_contents('php://input'), true); // 从POST请求中获取JSON数据  
+    $x = $data['x'];  
+    $y = $data['y'];  
+  
+    // 在这里处理你的X和Y值，例如保存到数据库或进行其他操作  
+  
+    // 返回一些数据给客户端（如果需要）  
+    echo json_encode(['status' => 'success', 'message' => 'Data received.']);  
+} else {  
+    // 如果不是POST请求，返回错误或其他信息  
+    echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);  
+}  
 ?>

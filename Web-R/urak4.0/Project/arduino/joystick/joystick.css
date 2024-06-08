@@ -1,0 +1,14 @@
+#joystickInfo {
+  position	: absolute;
+  width		: 100%;
+  text-align	: center;
+}
+#joystickContainer {
+  width		: 100%;
+  height		: 100%;
+  overflow	: hidden;
+  padding		: 0;
+  margin		: 0;
+  user-select	: none;
+  background-color:rgb(255, 255, 255);
+}
