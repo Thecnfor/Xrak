@@ -8,7 +8,7 @@ const char* ssid = "HUAWEI-W";
 const char* password = "W@18025693031";  
 
 void handleRoot() {  
-  server.send(200, "text/plain", "Arduino is ready");  
+  server.send(200, "text/plain", "这里可不该来，或者以后再来就有惊喜。");
 }  
 
 void setup() {  
@@ -46,7 +46,7 @@ void handleCommand() {
   if (server.hasArg("x") && server.hasArg("y")) {  
     String x = server.arg("x");  
     String y = server.arg("y");  
-    Serial.println(x + "," + y); // 移除/ln，添加换行符可以用println或print+"\n"  
+    Serial.println("MOVE" + x + "," + y); // 移除/ln，添加换行符可以用println或print+"\n"
     server.send(200, "text/plain", "读取成功 x=" + x + ", y=" + y);  
   }  
   // 如果没有找到任何匹配的参数，您可能还想发送一个默认的响应  
