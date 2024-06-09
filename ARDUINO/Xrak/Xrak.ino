@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>  
 #include <WiFiClient.h>  
 #include <ESP8266WebServer.h>  
-  
+
 ESP8266WebServer server(80);  
   
 const char* ssid = "HUAWEI-W";  
@@ -41,7 +41,7 @@ void handleCommand() {
     } else if (action.equals("turnOff")) {  
       Serial.print("turnOff");
       Serial.println("_control");
-    }   
+    }
     server.send(200, "text/plain", "读取成功 " + action);  //读取成功
   }
   if (server.hasArg("x")) {

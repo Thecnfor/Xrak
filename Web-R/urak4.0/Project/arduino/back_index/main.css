@@ -4,6 +4,10 @@
 *:focus {  
     outline: none;  
     box-shadow: none; /* 一些浏览器可能使用box-shadow来显示焦点 */  
+}
+*:not(input):not(textarea):not([contenteditable=true]) { /* 禁止用户选中文本 */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }  
 button:focus,  
 input[type="button"]:focus,  

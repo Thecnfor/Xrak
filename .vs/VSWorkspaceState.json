@@ -3,13 +3,14 @@
     "",
     "\\ARDUINO",
     "\\ARDUINO\\EADS",
-    "\\ARDUINO\\EADS\\Urak",
     "\\ARDUINO\\EADS\\Urak_copy",
     "\\ARDUINO\\Urak",
     "\\ARDUINO\\Xrak",
     "\\Web-R",
-    "\\Web-R\\urak4.0"
+    "\\Web-R\\urak4.0",
+    "\\Web-R\\urak4.0\\Project",
+    "\\Web-R\\urak4.0\\Project\\arduino",
+    "\\Web-R\\urak4.0\\Project\\arduino\\back_index"
   ],
-  "SelectedNode": "\\Web-R\\urak4.0\\loding.html",
   "PreviewInSolutionExplorer": false
 }

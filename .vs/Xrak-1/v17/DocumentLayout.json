@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "B:\\Xrak\\Xrak\\Xrak-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Xrak\\Xrak\\Xrak-1\\Web-R\\urak4.0\\loding.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web-R\\urak4.0\\loding.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\EADS\\Urak_copy\\Urak_copy.ino||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ARDUINO\\EADS\\Urak_copy\\Urak_copy.ino||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Xrak\\Xrak\\Xrak-1\\Web-R\\urak4.0\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web-R\\urak4.0\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\Urak\\Urak copy.ino||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ARDUINO\\Urak\\Urak copy.ino||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\Xrak\\Xrak.ino||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ARDUINO\\Xrak\\Xrak.ino||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,41 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "loding.html",
-              "DocumentMoniker": "B:\\Xrak\\Xrak\\Xrak-1\\Web-R\\urak4.0\\loding.html",
-              "RelativeDocumentMoniker": "Web-R\\urak4.0\\loding.html",
-              "ToolTip": "B:\\Xrak\\Xrak\\Xrak-1\\Web-R\\urak4.0\\loding.html*",
-              "RelativeToolTip": "Web-R\\urak4.0\\loding.html*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-08T13:02:16.747Z",
+              "Title": "Urak_copy.ino",
+              "DocumentMoniker": "B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\EADS\\Urak_copy\\Urak_copy.ino",
+              "RelativeDocumentMoniker": "ARDUINO\\EADS\\Urak_copy\\Urak_copy.ino",
+              "ToolTip": "B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\EADS\\Urak_copy\\Urak_copy.ino",
+              "RelativeToolTip": "ARDUINO\\EADS\\Urak_copy\\Urak_copy.ino",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAADAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVDhPlVM9aFNRGD33vtf0pSZNYxpDKSQtsdoo1MFCEVTERRCsFAcLonZxVVxEJ8GtHZwLDg6Kq4KDk\u002BAgSNPW2kCxXVS00J/0NbF5TfJ\u002Br\u002Be1dauiF07uzXe/8/Gd870rvCDA49IC8u3xxHqjccJVQQp/WbqQlU7DKM2UNzYnhgaVePChiHTUKKw1GuN1zz\u002BjoIy93H2XAOyopk8dihr3v1vWnJgsLbTPm\u002BazquMMB0rtpf19CSGQiETeFjo6RsXtd\u002B/PfrVqr5q\u002BnxRh/X9aChGpWblYbFSWG42U2bSj7ACbto2NZnMXdhMVx95BeP4dD3MqzDVtu5XcTlllYMv1UHU86JqGi7ksxvqP4GQ6DXoCixhIpXCTsUs9ORi6vpO75bqo2g6kxUPd99CqSdwpHMVhoVBeXcHlTBpjfXlcy/fialcG1bVVZBHg7rF\u002BxHRttzi50vZ9uBzlQLIDfn0bk4tLmLa2Mf7xE44faMOp9hgmpmfwU2p4/uUbqtsWBpMJcnw45EqbZBW673mwGBCaDoMaXTpd415jm06kFTq9AO8tyg0oO\u002BSEXOmGJP4pmSYUCRe6u5CIx3GjN4el5WXMEtd7sqgw7zSltLHQ7HoZkrMIu9CSwyMFXwVXGp6vfzY3cJB\u002BZHg5t7KCN2UT81YdzVoN2RYdW9xf/lhGWUhIIQKp1GuRf/J0xFXqBTlG2FbAAsKnLE5E0qzw2wvCLhlXPAsWkiwQNtAixC2pXLciXLcJOirog0Y7pJTcmU69vIMWaiVJoy\u002BS7u/kuq4TkBsWmIfjTIHG/CfmWKioxc\u002BdbyIIFpTn9REZQhA\u002BEewDRdicRpFjuOc7zqLofviIb1Tn563SFDnEQyf1/elV8bGITf4WIeQqfA\u002B/AN6Qto\u002BLDNA3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-06-08T13:08:26.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "home.html",
-              "DocumentMoniker": "B:\\Xrak\\Xrak\\Xrak-1\\Web-R\\urak4.0\\home.html",
-              "RelativeDocumentMoniker": "Web-R\\urak4.0\\home.html",
-              "ToolTip": "B:\\Xrak\\Xrak\\Xrak-1\\Web-R\\urak4.0\\home.html",
-              "RelativeToolTip": "Web-R\\urak4.0\\home.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-08T13:02:15.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Urak copy.ino",
-              "DocumentMoniker": "B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\Urak\\Urak copy.ino",
-              "RelativeDocumentMoniker": "ARDUINO\\Urak\\Urak copy.ino",
-              "ToolTip": "B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\Urak\\Urak copy.ino",
-              "RelativeToolTip": "ARDUINO\\Urak\\Urak copy.ino",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Title": "Xrak.ino",
+              "DocumentMoniker": "B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\Xrak\\Xrak.ino",
+              "RelativeDocumentMoniker": "ARDUINO\\Xrak\\Xrak.ino",
+              "ToolTip": "B:\\Xrak\\Xrak\\Xrak-1\\ARDUINO\\Xrak\\Xrak.ino",
+              "RelativeToolTip": "ARDUINO\\Xrak\\Xrak.ino",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACsAAAAFAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVDhPlVM9aFNRGD33vtf0pSZNYxpDKSQtsdoo1MFCEVTERRCsFAcLonZxVVxEJ8GtHZwLDg6Kq4KDk\u002BAgSNPW2kCxXVS00J/0NbF5TfJ\u002Br\u002Be1dauiF07uzXe/8/Gd870rvCDA49IC8u3xxHqjccJVQQp/WbqQlU7DKM2UNzYnhgaVePChiHTUKKw1GuN1zz\u002BjoIy93H2XAOyopk8dihr3v1vWnJgsLbTPm\u002BazquMMB0rtpf19CSGQiETeFjo6RsXtd\u002B/PfrVqr5q\u002BnxRh/X9aChGpWblYbFSWG42U2bSj7ACbto2NZnMXdhMVx95BeP4dD3MqzDVtu5XcTlllYMv1UHU86JqGi7ksxvqP4GQ6DXoCixhIpXCTsUs9ORi6vpO75bqo2g6kxUPd99CqSdwpHMVhoVBeXcHlTBpjfXlcy/fialcG1bVVZBHg7rF\u002BxHRttzi50vZ9uBzlQLIDfn0bk4tLmLa2Mf7xE44faMOp9hgmpmfwU2p4/uUbqtsWBpMJcnw45EqbZBW673mwGBCaDoMaXTpd415jm06kFTq9AO8tyg0oO\u002BSEXOmGJP4pmSYUCRe6u5CIx3GjN4el5WXMEtd7sqgw7zSltLHQ7HoZkrMIu9CSwyMFXwVXGp6vfzY3cJB\u002BZHg5t7KCN2UT81YdzVoN2RYdW9xf/lhGWUhIIQKp1GuRf/J0xFXqBTlG2FbAAsKnLE5E0qzw2wvCLhlXPAsWkiwQNtAixC2pXLciXLcJOirog0Y7pJTcmU69vIMWaiVJoy\u002BS7u/kuq4TkBsWmIfjTIHG/CfmWKioxc\u002BdbyIIFpTn9REZQhA\u002BEewDRdicRpFjuOc7zqLofviIb1Tn563SFDnEQyf1/elV8bGITf4WIeQqfA\u002B/AN6Qto\u002BLDNA3AAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-06-08T13:02:05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T13:06:49.282Z"
             }
           ]
         }

@@ -6,7 +6,7 @@ ESP8266WebServer server(80);
   
 const char* ssid = "HUAWEI-W";  
 const char* password = "W@18025693031";  
-  
+
 void handleRoot() {  
   server.send(200, "text/plain", "Arduino is ready");  
 }  
@@ -29,25 +29,26 @@ void setup() {
 }  
   
 void loop() {  
-  server.handleClient();  
+  server.handleClient();
 }
   
 void handleCommand() {  
-  if (server.hasArg("action")) {  //检查请求中是否包含 action 参数
-    String action = server.arg("action");  //获取action值
-    if (action.equals("turnOn")) {  //action.equals("turnOn")就是action==“turnOn”
-      Serial.print("TURN_ON");
-      Serial.println("_control");
+  if (server.hasArg("action")) {  
+    String action = server.arg("action");  
+    if (action.equals("turnOn")) {  
+      Serial.println("Control_TURN_ON"); // 简化为一个println调用  
+      server.send(200, "text/plain", "读取成功 action=" + action);  
     } else if (action.equals("turnOff")) {  
-      Serial.print("turnOff");
-      Serial.println("_control");
-    }   
-    server.send(200, "text/plain", "读取成功 " + action);  //读取成功
-  }
-  if (server.hasArg("x")) {
-    String x = server.arg("x");
-    String y = server.arg("y");
-    Serial.println(x+","+y+"/ln");
-    server.send(200, "text/plain", "读取成功");  //读取成功
-  }
-}  
+      Serial.println("Control_TURN_OFF"); // 简化为一个println调用  
+      server.send(200, "text/plain", "读取成功 action=" + action);  
+    }  
+  }  
+  if (server.hasArg("x") && server.hasArg("y")) {  
+    String x = server.arg("x");  
+    String y = server.arg("y");  
+    Serial.println(x + "," + y); // 移除/ln，添加换行符可以用println或print+"\n"  
+    server.send(200, "text/plain", "读取成功 x=" + x + ", y=" + y);  
+  }  
+  // 如果没有找到任何匹配的参数，您可能还想发送一个默认的响应  
+  return; // 明确表示函数结束  
+}
