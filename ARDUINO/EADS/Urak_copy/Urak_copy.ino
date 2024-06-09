@@ -16,6 +16,8 @@ void setup() {
 }  
 
 void loop() {      
+  static int currentX = 0 , currentY = 0;
+  static bool motorXRunnig = false, motorYRunning = false;
   if (Serial.available() > 0) {      
     String inputMessage = Serial.readStringUntil('\n');    
     if (inputMessage.startsWith("Control_")) {    
@@ -32,36 +34,61 @@ void loop() {
       if (inputIndex != -1) {    
         String xStr = command.substring(0, inputIndex);    
         String yStr = command.substring(inputIndex + 1);    
-        int x = xStr.toInt();    
-        int y = yStr.toInt();    
-        if (x > 10) {
-            digitalWrite(P1_DIR_PIN, HIGH);
-            digitalWrite(P1_PUL_PIN, HIGH);
-            delayMicroseconds(10);
-            digitalWrite(P1_PUL_PIN, LOW);
-            delay(STEP_DELAY);
-        } else if (x < -10) {
-            digitalWrite(P1_DIR_PIN, LOW);
-            digitalWrite(P1_PUL_PIN, HIGH);
-            delayMicroseconds(10);
-            digitalWrite(P1_PUL_PIN, LOW);
-            delay(STEP_DELAY);
-        } else if (y > 10) {
-            digitalWrite(P2_DIR_PIN, HIGH);
-            digitalWrite(P2_PUL_PIN, HIGH);
-            delayMicroseconds(10);
-            digitalWrite(P2_PUL_PIN, LOW);
-            delay(STEP_DELAY);
-        } else if (y < -10) {
-            digitalWrite(P2_DIR_PIN, LOW);
-            digitalWrite(P2_PUL_PIN, HIGH);
-            delayMicroseconds(10);
-            digitalWrite(P2_PUL_PIN, LOW);
-            delay(STEP_DELAY);
+        int newX = xStr.toInt();    
+        int newY = yStr.toInt();    
+        if (newX != currentX) {    
+          currentX = newX;   
+          motorXRunnig = true;
+        }
+        if (newY != currentY) {    
+          currentY = newY;   
+          motorYRunning = true;
         }
       } else {    
         Serial.println("数据错误=" + inputMessage);    
       }    
     }    
   }    
+  if (motorXRunnig) {
+      if (currentX > 0) {
+          while (currentX > 0) {
+              digitalWrite(P1_DIR_PIN, HIGH); // 设置方向  
+              digitalWrite(P1_PUL_PIN, HIGH);
+              delayMicroseconds(10);
+              digitalWrite(P1_PUL_PIN, LOW);
+              delay(STEP_DELAY);
+          }
+    } else {
+          while (currentX < 0) {
+              digitalWrite(P1_DIR_PIN, LOW); // 设置方向  
+              digitalWrite(P1_PUL_PIN, HIGH);
+              delayMicroseconds(10);
+              digitalWrite(P1_PUL_PIN, LOW);
+              delay(STEP_DELAY);
+          }
+  }
+    motorXRunning = false; // 停止X轴电机  
+    currentX = 0; // 重置当前X轴目标位置  
+  }
+    if (motorYRunning) {
+      if (currentY > 0) {
+          while (currentY > 0) {
+              digitalWrite(P2_DIR_PIN, HIGH); // 设置方向  
+              digitalWrite(P2_PUL_PIN, HIGH);
+              delayMicroseconds(10);
+              digitalWrite(P2_PUL_PIN, LOW);
+              delay(STEP_DELAY);
+          }
+      } else {
+          while (currentY < 0) {
+              digitalWrite(P2_DIR_PIN, LOW); // 设置方向  
+              digitalWrite(P2_PUL_PIN, HIGH);
+              delayMicroseconds(10);
+              digitalWrite(P2_PUL_PIN, LOW);
+              delay(STEP_DELAY);
+        }
+      }
+      motorYRunning = false; // 停止Y轴电机  
+      currentY = 0; // 重置当前Y轴目标位置 
+    }
 }

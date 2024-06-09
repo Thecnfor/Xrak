@@ -14,16 +14,16 @@ void handleRoot() {
 void setup() {  
   Serial.begin(115200);  
   WiFi.begin(ssid, password);  
-  while (WiFi.status() != WL_CONNECTED) {  
-    delay(500);  
-    Serial.print(".");  
-  }
-  Serial.println("");  
-  Serial.println("WiFi connected");  
+  // while (WiFi.status() != WL_CONNECTED) {  
+  //   delay(500);  
+  //   Serial.print(".");  
+  // }
+  // Serial.println("");  
+  // Serial.println("WiFi connected");  
     
   server.on("/", handleRoot);  
   server.begin();  
-  Serial.println("Server started");  
+  // Serial.println("Server started");  
 
   server.on("/command", handleCommand); // 添加新的路由  
 }  
